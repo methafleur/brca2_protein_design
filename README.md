@@ -12,7 +12,7 @@ Computational protein sequence design exercises on BRCA2 (breast cancer type 2 s
 - Partial sequence design with fixed DNA-binding residues (Run 2)
 
 ## Structure used
-- 1MIU (3.1Å, BRCA2 DBD bound to DSS1, Yang et al. 2002)
+- 1MIU (3.1Å, BRCA2 DBD bound to DSS1)
 
 ## Scripts
 - `scripts/convert_residue_numbers.py` 
