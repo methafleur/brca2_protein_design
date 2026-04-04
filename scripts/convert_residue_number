@@ -1,0 +1,24 @@
+import sys
+
+pdb_file = "structures/brca2_cleaned.pdb"
+targets = [2754, 2760, 2762, 2907, 2909, 2945]  # change these to whatever 
+
+resids = []
+seen = set()
+with open(pdb_file) as f:
+    for line in f:
+        if line.startswith('ATOM') and line[21] == 'A':
+            resi = int(line[22:26].strip())
+            if resi not in seen:
+                seen.add(resi)
+                resids.append(resi)
+
+print(f"Total residues in chain A: {len(resids)}")
+print(f"PDB numbering: {resids[0]} to {resids[-1]}")
+print()
+for t in targets:
+    if t in resids:
+        pos = resids.index(t) + 1
+        print(f"Residue {t} → sequential position {pos}")
+    else:
+        print(f"Residue {t} → NOT FOUND in structure")
