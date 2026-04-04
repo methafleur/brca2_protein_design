@@ -16,4 +16,4 @@ Computational protein sequence design exercises on BRCA2 (breast cancer type 2 s
 
 ## Scripts
 - `scripts/convert_residue_numbers.py` 
-- `scripts/check_fixed_positions.py` —
+- `scripts/check_fixed_positions.py` 
